@@ -1,0 +1,31 @@
+# ---- secrets ----
+.env
+*.pem
+*.key
+
+# ---- python ----
+backend/venv/
+backend/**/__pycache__/
+__pycache__/
+*.py[cod]
+
+# ---- django runtime state ----
+# SQLite, uploaded media and collected static live on the server's docker
+# volume, never in the repo.
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+
+# ---- build artifacts ----
+# frontend_dist is the compiled React app, staged into the backend by
+# deploy/deploy.sh at deploy time.
+backend/frontend_dist/
+frontend/node_modules/
+frontend/dist/
+
+# ---- editors / os ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

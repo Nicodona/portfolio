@@ -1,0 +1,30 @@
+# Portfolio stack for /opt/portfolio on the droplet (137.184.200.179).
+# Joins the existing Caddy network so the shared Caddy can reach it by
+# container name. Check the real network name with:  docker network ls
+#
+# The service MUST NOT be named `web` (or `db`/`caddy`/`n8n`): compose service
+# names become DNS aliases on the shared network, and a second `web` alias
+# made Caddy route school.caromabamenda.org traffic here (2026-07-18 outage).
+services:
+  portfolio:
+    build: ./backend
+    container_name: portfolio-web
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      SQLITE_PATH: /data/db.sqlite3
+      MEDIA_ROOT: /data/media
+    volumes:
+      - portfolio_data:/data
+    networks:
+      - caddy_net
+
+volumes:
+  portfolio_data:
+
+networks:
+  caddy_net:
+    external: true
+    # Set the real name after checking `docker network ls` on the droplet,
+    # e.g. lewa_default
+    name: ${CADDY_NETWORK:-lewa_default}

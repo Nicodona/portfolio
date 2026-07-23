@@ -1,0 +1,11 @@
+# Portfolio — nico.martac.org. The portfolio container serves both the API
+# and the built React app, so Caddy only needs to proxy to it (same pattern
+# as the other apps on this droplet). Append to /opt/lewa/deploy/Caddyfile
+# and reload:
+#   docker exec <caddy-container> caddy reload --config /etc/caddy/Caddyfile
+
+# ---- Portfolio (nico.martac.org) ----
+nico.martac.org {
+	encode gzip
+	reverse_proxy portfolio-web:8000
+}
