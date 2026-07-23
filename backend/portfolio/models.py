@@ -42,7 +42,7 @@ class SingletonModel(models.Model):
 
 class Profile(SingletonModel):
     full_name = models.CharField(max_length=120, default="Njei Nicodemus Mbacham")
-    preferred_name = models.CharField(max_length=60, blank=True, default="Nghan")
+    preferred_name = models.CharField(max_length=60, blank=True, default="Nico")
     headline = models.CharField(
         max_length=200,
         default="Full-Stack Developer & Health-Tech Engineer",

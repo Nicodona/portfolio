@@ -10,8 +10,7 @@ export default function SkillsPage() {
       <PageHeader
         eyebrow="Toolbox"
         title="Skills"
-        lede="The languages, frameworks and infrastructure I reach for — grouped
-        the way I actually use them."
+        lede="The languages, frameworks and infrastructure I work with."
       />
 
       <div className="skills-grid">

@@ -37,7 +37,7 @@ class Command(BaseCommand):
     def seed_profile(self):
         profile = Profile.load()
         profile.full_name = "Njei Nicodemus Mbacham"
-        profile.preferred_name = "Nghan"
+        profile.preferred_name = "Nico"
         profile.headline = "Full Stack Developer, Data Engineer and Health Tech Builder"
         profile.tagline = (
             "I build software that runs schools and health research programs in "
@@ -331,29 +331,6 @@ class Command(BaseCommand):
                 "outcome": "Gives the college a modern public face with a portal gateway.",
                 "is_featured": False,
                 "display_order": 5,
-            },
-            {
-                "slug": "this-portfolio",
-                "title": "This Portfolio",
-                "short_description": (
-                    "The site you are reading now: Django, React, SQLite "
-                    "visitor analytics and n8n automation."
-                ),
-                "description": (
-                    "I wanted my portfolio to be a working demonstration, not "
-                    "just a page about me. The content you are reading comes "
-                    "from a Django API and is fully editable from the admin "
-                    "panel, right down to this sentence. Every visit is "
-                    "logged to a lightweight SQLite database and rolled up "
-                    "into a private stats dashboard, and the contact form "
-                    "hands messages to n8n for automated follow up."
-                ),
-                "tech_tags": "Django, DRF, React, Vite, SQLite, n8n, Docker, Caddy",
-                "live_url": "",
-                "repo_url": "",
-                "outcome": "Content managed from Django admin, analytics included.",
-                "is_featured": False,
-                "display_order": 6,
             },
         ]
         for row in rows:

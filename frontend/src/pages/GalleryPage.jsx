@@ -20,8 +20,7 @@ export default function GalleryPage() {
       <PageHeader
         eyebrow="Beyond the desk"
         title="Gallery"
-        lede="Photos from work, school and everything in between. Work and
-        school photos also live on their own pages."
+        lede="Photos from work, school and everything in between."
       />
 
       {sections.length > 1 && (

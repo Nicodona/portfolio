@@ -80,11 +80,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <footer className="site-footer">
-        <div className="page">
-          Designed and built by {profile.full_name}. Powered by Django, React
-          and a single SQLite file, served from a DigitalOcean droplet behind
-          Caddy. Set in Space Grotesk, Inter and JetBrains Mono.
-        </div>
+        <div className="page">Copyright 2026 martian Tech -dot404engineering</div>
       </footer>
     </>
   );
